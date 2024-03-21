@@ -43,7 +43,7 @@ def dashboard():
         expenses.append({'category': category, 'amount': amount})
         return redirect(url_for('dashboard'))
 
-    return render_template('dashboard.html', expenses=expenses, income=income, budget_left=budget_left)
+    return render_template('dashboard.html', total_expenses=total_expenses, expenses=expenses, income=income, budget_left=budget_left)
 
 if __name__ == '__main__':
     app.run(debug=True)
